@@ -7,10 +7,10 @@
     $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
-        inDuration: 1500,
-        outDuration: 800,
+        inDuration: 0,
+        outDuration: 300,
         linkElement: '.animsition-link',
-        loading: true,
+        loading: false,
         loadingParentElement: 'html',
         loadingClass: 'animsition-loading-1',
         loadingInner: '<div class="cp-spinner cp-meter"></div>',

@@ -99,6 +99,17 @@ html {
   height: 100%;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+#consult-your-project {
+  scroll-margin-top: 130px;
+}
+
+@media (max-width: 992px) {
+  #consult-your-project {
+    scroll-margin-top: 100px;
+  }
 }
 
 /* ------------------------------------ */
@@ -241,6 +252,18 @@ iframe {
   max-width: 1200px;
 }
 
+/* Eliminar padding lateral del header para alineación completa */
+.wrap-menu-header .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+}
+
+.wrap-menu-header .container.h-full {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .slick-slide {
   outline: none !important;
 }
@@ -248,6 +271,11 @@ iframe {
 /*[ LOADDING ]
 ///////////////////////////////////////////////////////////
 */
+
+/* Force page visible immediately — animsition only animates on link transitions */
+.animsition {
+  opacity: 1 !important;
+}
 
 /* .animsition-loading-1 {
   position: absolute;
@@ -332,7 +360,7 @@ iframe {
 ///////////////////////////////////////////////////////////
 */
 .btn-back-to-top {
-  display: none;
+  display: flex !important;
   position: fixed;
   width: 40px;
   height: 40px;
@@ -365,6 +393,47 @@ iframe {
   .btn-back-to-top {
     bottom: 15px;
     right: 15px;
+  }
+}
+
+/*[ WHATSAPP BUTTON ]
+///////////////////////////////////////////////////////////
+*/
+.btn-whatsapp {
+  display: flex;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  right: 90px;
+  background-color: #25d366;
+  opacity: 0.85;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 4px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  text-decoration: none;
+}
+
+.btn-whatsapp i {
+  font-size: 22px;
+  color: white;
+  line-height: 1em;
+}
+
+.btn-whatsapp:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .btn-whatsapp {
+    bottom: 15px;
+    right: 65px;
   }
 }
 
@@ -536,130 +605,86 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 
+/* ─── Header bar: always fixed, white, consistent height ─── */
 .wrap-menu-header {
-  position: absolute;
-  width: 100%;
-  height: 150px;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  right: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1000;
+  background: #fff;
   border-top: 5px solid #ec1d25;
-}
-
-/* 1) Eleva la altura del contenedor .logo */
-.wrap-menu-header .logo {
-  height: auto !important;
-}
-
-/* 2) Haz que el enlace crezca según la img */
-.wrap-menu-header .logo > a {
-  height: auto !important;
-}
-
-/* 3) Quita el límite de max-height y aplica tu tamaño */
-.wrap-menu-header .logo > a > img {
-  max-height: 150px; /* no superará los 150px */
-  height: auto; /* deja que sea proporcional */
-  width: auto;
-  flex-shrink: 1;
-}
-
-.wrap_header {
-  display: flex !important;
-  flex-wrap: nowrap !important; /* fuerza todos en una línea */
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.wrap_header > * {
-  flex-shrink: 1;
-  min-width: 0; /* para que el shrink funcione correctamente */
-}
-
-/* 3) Ajusta tus flex-bases para darles prioridad */
-.logo {
-  flex: 0 1 auto; /* no crecer, pero sí encoger */
-}
-.wrap_menu {
-  flex: 2 1 auto !important;
-  min-width: 0;
-}
-.social {
-  flex: 0 1 auto;
-}
-
-/* 4) Forzar que el menú no genere wrap inesperado */
-.wrap_menu .main_menu {
-  display: flex;
-  flex-wrap: nowrap; /* todos en una línea */
-  overflow-x: auto; /* si extra apretado, habilita scroll horizontal */
-}
-.main_menu li a {
-  white-space: nowrap; /* sin saltos de línea */
-  padding: 0.5rem 0.75rem; /* reduce un poco el padding */
-  font-size: 14px;
-}
-
-/* Opcional: un sizing responsivo más suave */
-.wrap-menu-header .logo > a > img {
-  /* sustituye max-height/height si prefieres escala dinámica */
-  /* height: clamp(60px, 15vw, 150px); */
+  transition: box-shadow 0.3s ease;
 }
 
 .header-fixed .wrap-menu-header {
-  position: fixed;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*[ Logo ]
------------------------------------------------------------
-*/
+/* ─── Inner flex container ─── */
+.wrap_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 30px;
+  width: 100%;
+  gap: 20px;
+}
+
+/* ─── Logo: static size, never shrinks ─── */
 .logo {
-  height: 50px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 10;
 }
 
 .logo > a {
-  display: block;
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
 .logo > a > img {
+  display: block;
   width: auto;
-  max-height: 100%;
-  vertical-align: middle;
+  height: 100px;
+  max-height: 100px;
+  object-fit: contain;
 }
 
-/*[ Menu ]
------------------------------------------------------------
-*/
+/* ─── Menu: centered, flexible, never wraps ─── */
 .wrap_menu {
-  height: 100%;
-}
-
-.menu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .main_menu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  overflow: hidden;
+  gap: clamp(2px, 0.6vw, 10px);
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .main_menu li {
@@ -668,74 +693,50 @@ input[type="date" i] {
 }
 
 .main_menu > li {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 10px 0;
 }
 
 .main_menu > li > a {
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: clamp(12px, 1.3vw, 16px);
   text-transform: uppercase;
-  color: white;
-  padding: 15px;
+  color: #000;
+  padding: 10px clamp(6px, 1vw, 16px);
+  white-space: nowrap;
+  transition: color 0.3s;
 }
 
-.header-fixed .main_menu > li > a {
-  color: #222222;
-}
-
-.main_menu > li:hover > a {
+.main_menu > li > a:hover {
   color: #ec1d25;
   text-decoration: none;
 }
 
-/* ------------------------------------ */
+/* ─── Submenú ─── */
 .sub_menu {
   position: absolute;
   top: 0;
   left: 100%;
   width: 225px;
   background-color: white;
-
   transform-origin: top left;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
-
   transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.34;
 }
 
 .main_menu > li > .sub_menu {
   top: 100%;
   left: 0;
-  position: absolute;
 }
 
 .main_menu > li:hover .sub_menu {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
   transform: scale(1);
-}
-
-.sub_menu li:hover > .sub_menu {
-  display: block;
 }
 
 .sub_menu li {
   background-color: #f2f2f2;
   border-top: 1px solid #e0e0e0;
   transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -moz-transition: all 0.3s;
 }
 
 .sub_menu li:hover {
@@ -745,7 +746,7 @@ input[type="date" i] {
 .sub_menu li,
 .sub_menu a {
   padding: 10px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #808080;
@@ -759,30 +760,68 @@ input[type="date" i] {
 /*[ Social ]
 -----------------------------------------------------------
 */
-.social a {
-  font-size: 15px;
-  color: white;
+.social {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+  gap: 2px;
 }
 
-.header-fixed .social a {
-  color: #222222;
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.social a {
+  font-size: 16px;
+  color: #000;
+  transition: color 0.3s;
 }
 
 .social a:hover {
   color: #ec1d25;
 }
 
+.social i {
+  color: #000;
+  font-weight: 700;
+}
+
+.social i:hover {
+  color: #ec1d25;
+}
+
+.phone-contact {
+  display: flex;
+  align-items: center;
+}
+
+.phone-contact a {
+  color: #000;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.phone-contact a:hover {
+  color: #ec1d25;
+}
+
+/* ─── Hamburger button: hidden by default ─── */
 .btn-show-sidebar {
   width: 26px;
   height: 15px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
   display: none !important;
-}
-
-.header-fixed .btn-show-sidebar {
-  border-top: 2px solid #222222;
-  border-bottom: 2px solid #222222;
+  cursor: pointer;
+  background: transparent;
+  border-left: none;
+  border-right: none;
+  margin-left: 20px;
 }
 
 .btn-show-sidebar:hover {
@@ -790,31 +829,34 @@ input[type="date" i] {
   border-bottom: 2px solid #ec1d25;
 }
 
-@media (max-width: 1200px) {
-  .main_menu > li {
-    margin-left: 4px;
-    margin-right: 4px;
-    overflow-x: auto;
-  }
 
-  .social {
-    padding-right: 0px;
-  }
 
-  .logo {
-    height: 45px;
-  }
-}
-
+/* ─── Responsive: hamburger breakpoint ─── */
 @media (max-width: 992px) {
   .wrap_menu {
-    display: none;
+    display: none !important;
+  }
+
+  .btn-show-sidebar {
+    display: flex !important;
+    align-items: center;
   }
 
   .wrap_header {
-    height: 100px;
+    justify-content: space-between;
+  }
+
+  .wrap-menu-header {
+    height: 90px;
+  }
+
+  .logo > a > img {
+    height: 70px;
+    max-height: 70px;
   }
 }
+
+
 
 /*[ Sidebar ]
 ///////////////////////////////////////////////////////////
@@ -891,10 +933,6 @@ input[type="date" i] {
 }
 
 @media (max-width: 576px) {
-  .wrap_header {
-    height: 80px;
-  }
-
   .gallery-sidebar {
     padding-left: 20px;
     padding-right: 20px;
@@ -1544,6 +1582,13 @@ body {
   margin-bottom: 10px;
 }
 
+.item-gallery-footer img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
 .item-gallery-footer::after {
   content: "";
   display: block;
@@ -1675,27 +1720,81 @@ body {
   transition: filter 0.3s ease; /* suave al hover */
 }
 
-.overlay-item-gallery {
-  position: absolute !important;
-  top: 8px;
-  left: 8px;
-  width: auto !important;
-  height: auto !important;
-  background: transparent !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  /* padding: 0 !important; */
-  transition: none !important;
-  border-radius: 50%;
-  padding: 8px !important; /* espacio alrededor del icono */
-  z-index: 20;
+/* Asegura posicionamiento relativo del contenedor */
+.item-gallery {
+  position: relative;
+  overflow: hidden; /* opcional, por si el overlay se sale */
 }
 
-.overlay-item-gallery:hover {
+/* Imagen base */
+.item-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Overlay: ocupa todo el contenedor, centrado, oculto por defecto */
+.overlay-item-gallery {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 20;
+  pointer-events: none; /* no intercepta clics cuando está oculto */
+  background: transparent; /* sin fondo; déjalo así o pon un leve oscurecido si quieres */
+}
+
+/* Mostrar overlay SOLO al hover del contenedor */
+.item-gallery:hover .overlay-item-gallery {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* ahora sí recibe clics en cualquier parte */
+  cursor: pointer;
+}
+
+/* El <a> ocupa todo el overlay para que cualquier clic abra el modal */
+.overlay-item-gallery .btn-show-gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff; /* color del ícono de la lupa (Font Awesome) */
+  outline: none;
+}
+
+/* Burbujita circular detrás de la lupa, centrada */
+.overlay-item-gallery .btn-show-gallery::after {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.28
+  ); /* ajusta opacidad si quieres más/menos contraste */
+}
+
+/* Tamaño del ícono (la clase .fa ya lo dibuja en el <a>) */
+.overlay-item-gallery .btn-show-gallery.fa {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Accesibilidad: al navegar con teclado */
+.item-gallery:focus-within .overlay-item-gallery {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .btn-show-gallery {
@@ -1845,59 +1944,8 @@ body {
 .sidebar .menu-sidebar li a:hover {
   color: #ec1d25 !important;
 }
-/* 1) FONDO SIEMPRE BLANCO */
-.wrap-menu-header.bgwhite {
-  background-color: #fff !important;
-}
 
-/* 2) TAMAÑOS POR DEFECTO */
-.wrap-menu-header {
-  height: 150px; /* igual que tu header original */
-  transition: height 0.3s; /* animación suave */
-}
-.wrap-menu-header .logo img {
-  height: clamp(60px, 15vw, 150px) !important;
-  width: auto !important;
-  flex-shrink: 1;
-}
-
-/* 4) MENÚ PRINCIPAL EN NEGRO Y NEGRITA */
-.wrap-menu-header.bgwhite .main_menu > li > a {
-  color: #000 !important;
-  font-weight: 700;
-}
-.wrap-menu-header.bgwhite .main_menu > li > a:hover {
-  color: #ec1d25 !important;
-}
-
-/* 5) ICONOS SOCIALES EN NEGRO Y EN ROJO AL HOVER */
-.wrap-menu-header.bgwhite .social i {
-  color: #000 !important;
-  font-weight: 700;
-}
-.wrap-menu-header.bgwhite .social i:hover {
-  color: #ec1d25 !important;
-}
-
-/* 6) TELEFONO EN NEGRO Y NEGRITA */
-.wrap-menu-header.bgwhite .phone-contact a {
-  color: #000 !important;
-  font-weight: 700;
-}
-.wrap-menu-header.bgwhite .phone-contact a:hover {
-  color: #ec1d25 !important;
-}
-
-/* 7) BOTÓN DE SIDEBAR EN NEGRO Y ROJO AL HOVER */
-.wrap-menu-header.bgwhite .btn-show-sidebar {
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-}
-.wrap-menu-header.bgwhite .btn-show-sidebar:hover {
-  border-color: #ec1d25;
-}
-
-/* 8) LINKS DEL SIDEBAR EN NEGRO Y NEGRITA */
+/* ─── Sidebar button styles ─── */
 .sidebar .menu-sidebar .txt19 {
   color: #000 !important;
   font-weight: 700;
@@ -1956,105 +2004,30 @@ body {
   font-weight: 400 !important; /* fuerza texto no en negrita */
 }
 .sidebar .menu-sidebar .btn3.size13:hover {
-  background-color: #c71f24 !important; /* hover en rojo oscuro */
+  background-color: #c71f24 !important;
 }
 
-/* Reducir ancho del botón y centrar el texto */
+/* Reducir ancho del botón slide */
 .wrap-btn-slide1 .btn1.size1 {
-  display: inline-flex !important; /* inline-flex para respetar tamaño de contenido */
-  justify-content: center !important; /* centrar horizontal */
-  align-items: center !important; /* centrar vertical */
-  width: auto !important; /* quita cualquier width fijo */
-  padding: 0.6em 1.4em !important; /* ajusta grosor y largo */
-  white-space: nowrap !important; /* evita salto de línea */
-  font-size: 1rem !important; /* mantén tu tamaño de texto */
-}
-
-/* Reducir ancho del botón y centrar el texto */
-.wrap-btn-slide1 .btn1.size1 {
-  display: inline-flex !important; /* inline-flex para respetar tamaño de contenido */
-  justify-content: center !important; /* centrar horizontal */
-  align-items: center !important; /* centrar vertical */
-  width: auto !important; /* quita cualquier width fijo */
-  padding: 0.6em 1.4em !important; /* ajusta grosor y largo */
-  white-space: nowrap !important; /* evita salto de línea */
-  font-size: 1rem !important; /* mantén tu tamaño de texto */
-}
-
-/* === Override botón “Get A Free Quote” en el sidebar === */
-.sidebar .menu-sidebar li .btn3 {
-  /* Que no herede anchos fijos */
-  width: auto !important;
-  height: auto !important;
-
-  /* Que se comporte como inline-flex para centrar su contenido */
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
-
-  /* Padding a tu gusto */
-  padding: 0.6em 1.2em !important;
-
-  /* Centrado horizontal dentro del li */
-  margin: 0 auto !important;
-
-  /* Fuerza texto normal, no en negrita */
-  font-weight: 400 !important;
-}
-
-/* ─── Altura del header ─── */
-.wrap-menu-header,
-.header-fixed .wrap-menu-header {
-  height: 155px !important; /* Baja de 150px a 130px */
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff !important;
-  border-top: 5px solid #ec1d25;
-  z-index: 1000;
-}
-
-/* ─── Logo más pequeño y centrado verticalmente ─── */
-.wrap-menu-header .logo {
-  position: absolute;
-  top: 50%;
-  left: 70px; /* separación del borde izquierdo */
-  transform: translateY(-50%);
-  z-index: 1001;
-}
-
-/* ─── Ajusta el tamaño máximo del logo ─── */
-.wrap-menu-header .logo img,
-.header-fixed .wrap-menu-header .logo img {
-  max-height: 150px !important; /* Baja de 140px a 110px */
   width: auto !important;
+  padding: 0.6em 1.4em !important;
+  white-space: nowrap !important;
+  font-size: 1rem !important;
 }
 
-/* ─── Empuja el resto del header hacia la derecha para no chocar con el logo ─── */
-.wrap-menu-header .wrap_header {
-  display: flex !important;
-  align-items: center !important;
+/* Override botón "Get A Free Estimate" en el sidebar */
+.sidebar .menu-sidebar li .btn3 {
+  width: auto !important;
+  height: auto !important;
+  display: inline-flex !important;
   justify-content: center !important;
-  height: 100%;
-  padding: 0 20px; /* espacio lateral */
-}
-
-/* ─── El menú arranca un poco más a la derecha ─── */
-.wrap-menu-header nav.menu {
-  margin-left: 70px; /* al menos igual al ancho del logo + separación */
-}
-
-/* ─── Sin cambios al hacer scroll ─── */
-.header-fixed .wrap-menu-header .logo,
-.header-fixed .wrap-menu-header .wrap_header {
-  /* repetimos para que no haya “salto” */
-  height: 150px !important;
-}
-
-.wrap-menu-header .wrap_menu {
-  /* crea espacio a la derecha del menú */
-  margin-right: 80px; /* <-- cámbialo por el espacio que quieras */
+  align-items: center !important;
+  padding: 0.6em 1.2em !important;
+  margin: 0 auto !important;
+  font-weight: 400 !important;
 }
 
 .video-header {
@@ -2159,6 +2132,9 @@ body {
   gap: 80px;
   padding: 35px 0 28px 0;
   border-bottom: 2px solid #fff;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
 }
 .counter-block {
   display: flex;
@@ -2187,19 +2163,24 @@ body {
 
 @media (max-width: 900px) {
   .review-banner-top-counters {
-    flex-direction: column;
-    gap: 28px;
-    padding: 20px 0 15px 0;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px 15px;
+    padding: 25px 15px;
+  }
+  .counter-block {
+    gap: 8px;
   }
   .counter-icon img {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
   }
   .counter-text .counter-number {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .counter-label {
-    font-size: 0.97rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -2295,34 +2276,6 @@ body {
   color: #fff;
 }
 
-/* 1) Permite que wrap_menu encaje y se encoja */
-.wrap-menu-header .wrap_header > .wrap_menu {
-  flex: 1 1 auto; /* crecer/encoger */
-  min-width: 0; /* para que flex-shrink surta efecto */
-  padding-left: clamp(10px, 6vw, 69px) !important;
-  overflow: hidden; /* evitar que el logo o los items desborden */
-}
-
-/* 2) Ajusta el logo para que también se reduzca */
-.wrap-menu-header .logo img {
-  width: auto !important;
-}
-
-/* 3) Hace que los enlaces del menú se encojan (padding + font) */
-.wrap-menu-header .wrap_menu .main_menu > li > a {
-  white-space: nowrap; /* no partir en dos líneas */
-  font-size: clamp(12px, 1vw, 14px) !important;
-  padding: clamp(6px, 1vw, 15px) clamp(8px, 1vw, 15px) !important;
-}
-
-/* 4) Asegura que el contenedor del menú no haga wrap y permita scroll si es necesario */
-.wrap-menu-header .wrap_menu .main_menu {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-/* Estilo para el “Attach files” */
 .attach-label {
   cursor: pointer;
   display: inline-flex;
@@ -2330,6 +2283,19 @@ body {
   gap: 6px;
   color: #222; /* ajusta al color de tu texto */
   font-size: 14px; /* armoniza con .txt9 si fuera necesario */
+}
+
+.attachment-status {
+  color: #777;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 6px 0 8px;
+}
+
+.attachment-status.has-files {
+  color: #222;
+  font-weight: 700;
 }
 /* 1) Layout de 3 columnas con gap en la galería */
 .wrap-gallery.isotope-grid {
@@ -2385,6 +2351,6 @@ body {
 
 /* 3) Tu título y overlay encima del vídeo */
 .video-bg-container .video-overlay {
-  position: relative;
+  position: absolute;
   z-index: 1;
 }

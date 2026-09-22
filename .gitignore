@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+# Archivos del sistema
+.DS_Store
+# Logs
+*.log
+includes/inquiry_log.json
+includes/smtp-config.php
+# Compilados
+dist/
+build/
+EOF
+fonts/
+vendor/
+images/
+videos/

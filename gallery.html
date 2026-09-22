@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
-    <title>Gallery</title>
+    <title>Painting Project Gallery | V&amp;V Painting</title>
+    <meta name="description" content="View interior painting, exterior painting, staining, carpentry, and home improvement projects by Vasquez &amp; Vasquez Painting." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://vasquezandservices.com/gallery.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Painting Project Gallery | V&amp;V Painting" />
+    <meta property="og:description" content="See completed interior, exterior, cabinet, staining, carpentry, and home improvement projects." />
+    <meta property="og:url" content="https://vasquezandservices.com/gallery.html" />
+    <meta property="og:image" content="https://vasquezandservices.com/images/modal_05.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -10,7 +19,7 @@
       rel="stylesheet"
     />
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <link rel="icon" type="image/png" href="images/icons/favicon-vv-2026.png" />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
@@ -66,7 +75,99 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/seo-content.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://vasquezandservices.com/gallery.html#webpage",
+            "url": "https://vasquezandservices.com/gallery.html",
+            "name": "Painting Project Gallery",
+            "about": {"@id": "https://vasquezandservices.com/#business"},
+            "mainEntity": {"@id": "https://vasquezandservices.com/gallery.html#projects"},
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://vasquezandservices.com/gallery.html#projects",
+            "name": "Featured Painting and Finishing Projects",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Residential Exterior Painting",
+                  "description": "Portfolio example showing a uniform exterior finish across walls, trim, columns, and architectural details.",
+                  "image": "https://vasquezandservices.com/images/modal_05.webp",
+                  "about": {"@type": "Service", "name": "Exterior Painting"}
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Kitchen Cabinet Painting",
+                  "description": "Portfolio example showing painted cabinet doors, drawer fronts, trim, and a coordinated kitchen island finish.",
+                  "image": "https://vasquezandservices.com/images/modal_08.webp",
+                  "about": {"@type": "Service", "name": "Cabinet Painting"}
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Custom Wood Staining",
+                  "description": "Portfolio example showing a large wood tabletop with a warm, even stain finish.",
+                  "image": "https://vasquezandservices.com/images/stain_1.webp",
+                  "about": {"@type": "Service", "name": "Wood Staining"}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <!--===============================================================================================-->
+    <style>
+      /* Estilos para mantener tamaño consistente en lightbox */
+      .lightbox .lb-image {
+        max-width: 95vw !important;
+        max-height: 90vh !important;
+        object-fit: contain !important;
+        border: none !important;
+      }
+
+      .lb-outerContainer {
+        max-width: 95vw !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+      }
+
+      .lb-dataContainer {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+      }
+
+      /* Mover el botón de cerrar arriba a la derecha del modal */
+      .lb-data .lb-close {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        float: none !important;
+        width: 40px !important;
+        height: 40px !important;
+        background-size: contain !important;
+        z-index: 10001 !important;
+      }
+
+      .lb-outerContainer {
+        position: relative !important;
+      }
+    </style>
   </head>
   <body class="animsition">
     <!-- Header -->
@@ -78,10 +179,10 @@
             <!-- Logo -->
             <div class="logo">
               <a href="index.html">
-                <img
-                  src="images/icons/logo-vv.png"
-                  alt="IMG-LOGO"
-                  data-logofixed="images/icons/logo-vv.png"
+                <img decoding="async" width="1340" height="800"
+                  src="images/icons/logo-vv-2026.webp"
+                  alt="Vasquez &amp; Vasquez Painting"
+                  data-logofixed="images/icons/logo-vv-2026.webp"
                 />
               </a>
             </div>
@@ -111,43 +212,22 @@
                   </li>
 
                   <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">Free Estimate</a>
                   </li>
                 </ul>
               </nav>
             </div>
 
             <!-- Social -->
-            <div
-              class="social flex-w flex-l-m p-r-20"
-              style="flex-direction: column; align-items: center"
-            >
-              <!-- fila de íconos sociales + botón -->
-              <div style="display: flex; gap: 21px; align-items: center">
-                <a
-                  href="https://www.instagram.com/vasquezandvasquez.painting/"
-                  target="_blank"
-                  ><i class="fa fa-instagram" aria-hidden="true"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/vasquezvasquez.painting"
-                  target="_blank"
-                  ><i class="fa fa-facebook" aria-hidden="true"></i
-                ></a>
-                <a
-                  href="https://www.angi.com/companylist/us/fl/riverview/vasquez-and-vasquez-painting-reviews-9389683.htm"
-                  target="_blank"
-                  ><i class="fa fa-angi" aria-hidden="true"></i
-                ></a>
-                <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+            <div class="social">
+              <div class="social-icons">
+                <a href="https://www.instagram.com/vasquezandvasquez.painting/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/vasquezvasquez.painting" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.angi.com/companylist/us/fl/riverview/vasquez-and-vasquez-painting-reviews-9389683.htm" target="_blank"><i class="fa fa-angi" aria-hidden="true"></i></a>
+                <button class="btn-show-sidebar trans-0-4"></button>
               </div>
-
-              <!-- teléfono centrado bajo los íconos -->
               <div class="phone-contact">
-                <a href="tel:+59891123456">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                  (813) 563 5604
-                </a>
+                <a href="tel:+18138477863"><i class="fa fa-phone" aria-hidden="true"></i> (813) 847 7863</a>
               </div>
             </div>
           </div>
@@ -167,7 +247,7 @@
         </li>
 
         <li class="t-center m-b-13">
-          <a href="menu.html" class="txt19">Menu</a>
+          <a href="services.html" class="txt19">Services</a>
         </li>
 
         <li class="t-center m-b-13">
@@ -179,20 +259,20 @@
         </li>
 
         <li class="t-center m-b-13">
-          <a href="blog.html" class="txt19">Blog</a>
+          <a href="promotions.html" class="txt19">Promotions</a>
         </li>
 
         <li class="t-center m-b-33">
-          <a href="contact.html" class="txt19">Contact</a>
+          <a href="contact.html" class="txt19">Free Estimate</a>
         </li>
 
         <li class="t-center">
           <!-- Button3 -->
           <a
-            href="reservation.html"
+            href="/#consult-your-project"
             class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
           >
-            Get A Free Quote
+            Get A Free Estimate
           </a>
         </li>
       </ul>
@@ -209,7 +289,7 @@
             href="images/photo-gallery-01.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/enhanced_f1.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="720" height="538" src="images/enhanced_f1.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -217,7 +297,7 @@
             href="images/photo-gallery-02.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-02.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -225,7 +305,7 @@
             href="images/photo-gallery-03.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-03.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -233,7 +313,7 @@
             href="images/photo-gallery-05.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-05.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -241,7 +321,7 @@
             href="images/photo-gallery-06.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-06.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -249,7 +329,7 @@
             href="images/photo-gallery-07.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-07.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -257,7 +337,7 @@
             href="images/photo-gallery-09.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-09.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -265,7 +345,7 @@
             href="images/photo-gallery-10.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-10.webp" alt="Completed painting and home improvement project" />
           </a>
 
           <a
@@ -273,7 +353,7 @@
             href="images/photo-gallery-11.jpg"
             data-lightbox="gallery-footer"
           >
-            <img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY" />
+            <img loading="lazy" decoding="async" width="320" height="320" src="images/photo-gallery-thumb-11.webp" alt="Completed painting and home improvement project" />
           </a>
         </div>
       </div>
@@ -285,14 +365,12 @@
       class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15 video-bg-container"
       style="background-image: url(images/siesta.webp)"
     >
-      <video class="video-bg" autoplay muted loop playsinline>
-        <track src="videos/gallery_module_subtitles.vtt" kind="subtitles" srclang="en" label="English" default />
-        <track src="videos/gallery_module_description.vtt" kind="descriptions" srclang="en" label="English Descriptions" />
-        <source src="videos/gallery_module.mp4" type="video/mp4" />
+      <video class="video-bg" autoplay muted loop playsinline preload="none" poster="images/video-posters/gallery-hero.webp">
+        <source src="videos/gallery-module-optimized.mp4" media="(min-width: 768px)" type="video/mp4" />
         Tu navegador no soporta vídeo.
       </video>
       <div class="video-overlay flex-c-m">
-        <h2 class="tit6 t-center">Gallery</h2>
+        <h1 class="tit6 t-center">Gallery</h1>
       </div>
     </section>
 
@@ -311,32 +389,38 @@
         <button class="label-gallery txt26 trans-0-4" data-filter=".interior">
           Interior
         </button>
-        <button class="label-gallery txt26 trans-0-4" data-filter=".food">
+        <button class="label-gallery txt26 trans-0-4" data-filter=".exterior">
           Exterior
         </button>
-        <button class="label-gallery txt26 trans-0-4" data-filter=".events">
+        <button class="label-gallery txt26 trans-0-4" data-filter=".gabinets">
           Gabinets
         </button>
-        <button class="label-gallery txt26 trans-0-4" data-filter=".events">
+        <button class="label-gallery txt26 trans-0-4" data-filter=".stairs">
           Stairs
         </button>
-        <button class="label-gallery txt26 trans-0-4" data-filter=".guests">
+        <button class="label-gallery txt26 trans-0-4" data-filter=".floors">
           Floors
         </button>
-        <button class="label-gallery txt26 trans-0-4" data-filter=".guests">
+        <button class="label-gallery txt26 trans-0-4" data-filter=".stains">
           Stains
         </button>
-        <button class="label-gallery txt26 trans-0-4" data-filter=".guests">
+        <!-- <button class="label-gallery txt26 trans-0-4" data-filter=".roofs">
           Roofs
+        </button> -->
+        <button
+          class="label-gallery txt26 trans-0-4"
+          data-filter=".beforeafter"
+        >
+          Before/After
         </button>
       </div>
 
       <div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
         <!-- Item1 -->
         <div
-          class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests"
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom events exterior"
         >
-          <img src="images/modal_05.jpg" alt="IMG-GALLERY" />
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_05.webp" alt="Completed exterior painting project" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -348,21 +432,23 @@
         </div>
 
         <!-- Item2 -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom food">
-          <img src="images/modal_08.png" alt="IMG-GALLERY" />
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom gabinets interior"
+        >
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_08.webp" alt="Painted kitchen cabinets" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
               class="btn-show-gallery flex-c-m fa fa-search"
-              href="images/modal_08.jpg"
+            href="images/modal_08.png"
               data-lightbox="gallery"
             ></a>
           </div>
         </div>
 
         <!-- Item3 -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events">
-          <img src="images/stairs.jpg" alt="IMG-GALLERY" />
+        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom stairs">
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/stairs.webp" alt="Refinished interior staircase" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -374,8 +460,10 @@
         </div>
 
         <!-- Item4 -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom food">
-          <img src="images/modal_03.png" alt="IMG-GALLERY" />
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom exterior roofs"
+        >
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_03.webp" alt="Exterior roofline and trim painting" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -387,8 +475,8 @@
         </div>
 
         <!-- Item5 -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom food">
-          <img src="images/modal_06.jpg" alt="IMG-GALLERY" />
+        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom exterior">
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_06.webp" alt="Completed home exterior painting" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -399,11 +487,23 @@
           </div>
         </div>
 
+        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom exterior">
+          <img loading="lazy" decoding="async" width="3024" height="4032" src="images/door_2.webp" alt="Painted exterior entry door" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/door_2.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+
         <!-- Item6 -->
         <div
-          class="item-gallery isotope-item bo-rad-10 hov-img-zoom interior guests"
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom exterior roofs"
         >
-          <img src="images/modal_02.jpg" alt="IMG-GALLERY" />
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_02.webp" alt="Exterior painting and roof detail" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -415,8 +515,10 @@
         </div>
 
         <!-- Item7 -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom interior">
-          <img src="images/modal_07.png" alt="IMG-GALLERY" />
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom interior gabinets"
+        >
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_07.webp" alt="Interior cabinet painting project" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -428,8 +530,10 @@
         </div>
 
         <!-- Item8 -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom interior">
-          <img src="images/modal_11.png" alt="IMG-GALLERY" />
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom interior stairs floors"
+        >
+          <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_11.webp" alt="Completed residential painting project" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
@@ -441,13 +545,143 @@
         </div>
 
         <!-- - -->
-        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events">
-          <img src="images/resized_image_2.jpg" alt="IMG-GALLERY" />
+        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom exterior">
+          <img loading="lazy" decoding="async" width="720" height="538" src="images/resized_image_2.webp" alt="Finished interior painting project" />
 
           <div class="overlay-item-gallery trans-0-4 flex-c-m">
             <a
               class="btn-show-gallery flex-c-m fa fa-search"
               href="images/resized_image_2.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <!-- - -->
+        <!-- -STAINS -->
+        <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom stains">
+          <img loading="lazy" decoding="async" width="4032" height="3024" src="images/stain_1.webp" alt="Stained outdoor wood surface" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/stain_1.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+           <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom stains">
+          <img loading="lazy" decoding="async" width="3024" height="4032" src="images/stain_2.webp" alt="Custom wood stain finish" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/stain_2.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <!-- - -->
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="4000" height="3000" src="images/before_1.webp" alt="Painting project before work began" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_1.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <!-- - -->
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="4000" height="3000" src="images/before_2.webp" alt="Surface condition before painting" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_2.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="4032" height="3024" src="images/before_3.webp" alt="Exterior before preparation and painting" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_3.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="4032" height="3024" src="images/before_4.webp" alt="Home exterior before repainting" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_4.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="3024" height="4032" src="images/before_5.webp" alt="Project area before improvements" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_5.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="3024" height="4032" src="images/before_6.webp" alt="Interior surface before refinishing" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_6.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="4032" height="3024" src="images/before_7.webp" alt="Residential project before painting" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_7.jpg"
+              data-lightbox="gallery"
+            ></a>
+          </div>
+        </div>
+        <div
+          class="item-gallery isotope-item bo-rad-10 hov-img-zoom beforeafter"
+        >
+          <img loading="lazy" decoding="async" width="4032" height="3024" src="images/before_8.webp" alt="Exterior surface before restoration" />
+
+          <div class="overlay-item-gallery trans-0-4 flex-c-m">
+            <a
+              class="btn-show-gallery flex-c-m fa fa-search"
+              href="images/before_8.jpg"
               data-lightbox="gallery"
             ></a>
           </div>
@@ -463,29 +697,60 @@
       </div>
     </div>
 
-    <!-- Sign up -->
-    <div class="section-signup bg1-pattern p-t-85 p-b-85">
-      <form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
-        <span class="txt5 m-10"> Specials Sign up </span>
-
-        <div
-          class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10"
-        >
-          <input
-            class="bo-rad-10 sizefull txt10 p-l-20"
-            type="text"
-            name="email-address"
-            placeholder="Email Adrress"
-          />
-          <i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
+    <!-- Featured project details -->
+    <section id="featured-projects" class="project-studies-section p-t-100 p-b-100 bg1-pattern">
+      <div class="container">
+        <div class="t-center m-b-50">
+          <span class="seo-eyebrow">Selected Work</span>
+          <h2 class="seo-section-title">Featured painting and finishing projects</h2>
+          <p class="project-studies-intro">These portfolio notes describe the work visible in the project photographs. Exact property addresses and completion dates are not published for customer privacy.</p>
         </div>
 
-        <!-- Button3 -->
-        <button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
-          Sign-up
-        </button>
-      </form>
-    </div>
+        <div class="project-studies-grid">
+          <article class="project-study-card">
+            <img width="1024" height="1024" loading="lazy" decoding="async" src="images/modal_05.webp" alt="Finished residential exterior with painted walls, trim, and columns" />
+            <div class="project-study-content">
+              <p class="project-study-type">Exterior Painting</p>
+              <h3>Residential Exterior Painting</h3>
+              <dl class="project-study-details">
+                <div><dt>Service region</dt><dd>St. Petersburg and nearby Tampa Bay communities</dd></div>
+                <div><dt>Completion date</dt><dd>Not publicly disclosed</dd></div>
+                <div><dt>Scope shown</dt><dd>Exterior walls, trim, columns, and architectural details</dd></div>
+                <div><dt>Result shown</dt><dd>A clean, uniform finish across the home exterior</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-study-card">
+            <img width="1024" height="1024" loading="lazy" decoding="async" src="images/modal_08.webp" alt="Kitchen with painted cabinet doors, drawers, trim, and island" />
+            <div class="project-study-content">
+              <p class="project-study-type">Cabinet Painting</p>
+              <h3>Kitchen Cabinet Painting</h3>
+              <dl class="project-study-details">
+                <div><dt>Service region</dt><dd>St. Petersburg and nearby Tampa Bay communities</dd></div>
+                <div><dt>Completion date</dt><dd>Not publicly disclosed</dd></div>
+                <div><dt>Scope shown</dt><dd>Cabinet doors, drawer fronts, trim, and kitchen island</dd></div>
+                <div><dt>Result shown</dt><dd>A coordinated painted finish throughout the cabinetry</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-study-card">
+            <img width="4032" height="3024" loading="lazy" decoding="async" src="images/stain_1.webp" alt="Large wood tabletop with a warm stained finish" />
+            <div class="project-study-content">
+              <p class="project-study-type">Wood Finishing</p>
+              <h3>Custom Wood Staining</h3>
+              <dl class="project-study-details">
+                <div><dt>Service region</dt><dd>St. Petersburg and nearby Tampa Bay communities</dd></div>
+                <div><dt>Completion date</dt><dd>Not publicly disclosed</dd></div>
+                <div><dt>Scope shown</dt><dd>Preparation and staining of a large wood tabletop</dd></div>
+                <div><dt>Result shown</dt><dd>An even, warm-toned finish that keeps the wood grain visible</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg1">
@@ -501,7 +766,7 @@
                   class="fa fa-map-marker fs-16 dis-inline-block size19"
                   aria-hidden="true"
                 ></i>
-                8th floor, 123 Hudson, Tampa, Fl 33607
+                11401 Dr M.L.K. Jr St N, St. Petersburg, FL 33716
               </li>
 
               <li class="txt14 m-b-14">
@@ -509,7 +774,7 @@
                   class="fa fa-phone fs-16 dis-inline-block size19"
                   aria-hidden="true"
                 ></i>
-                (+1) 813 563 5604
+                (+1) 813 847 7863
               </li>
 
               <li class="txt14 m-b-14">
@@ -522,48 +787,29 @@
             </ul>
 
             <!-- - -->
-            <h4 class="txt13 m-b-32">Opening Times</h4>
+            <h4 class="txt13 m-b-32"></h4>
 
             <ul>
-              <li class="txt14">09:30 AM – 11:00 PM</li>
+              <li class="txt14"></li>
 
-              <li class="txt14">Every Day</li>
+              <li class="txt14"></li>
             </ul>
           </div>
 
           <div class="col-sm-6 col-md-4 p-t-50">
             <!-- - -->
-            <h4 class="txt13 m-b-33">Latest twitter</h4>
+            <h4 class="txt13 m-b-33">Opening Hours</h4>
 
-            <div class="m-b-25">
-              <span class="fs-13 color2 m-r-5">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-              <a href="#" class="txt15"> @sysengineer </a>
-
-              <p class="txt14 m-b-18">
-                Sysolutions is a good option. It has a slider built into that
-                displays the featured image in the slider.
-                <a href="#" class="txt15"> https://buff.ly/2zaSfAQ </a>
-              </p>
-
-              <span class="txt16"> 22 Apr 2025 </span>
-            </div>
-
-            <div>
-              <span class="fs-13 color2 m-r-5">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-              <a href="#" class="txt15"> @sysengineer </a>
-
-              <p class="txt14 m-b-18">
-                Sysolutions is a good option. It has a slider built into that
-                displays
-                <a href="#" class="txt15"> https://buff.ly/2zaSfAQ </a>
-              </p>
-
-              <span class="txt16"> 22 Apr 2025 </span>
-            </div>
+            <ul>
+              <li class="txt14 m-b-14">
+                <i class="fa fa-clock-o fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                Mon - Sat: 7:00 a.m - 7:00 p.m
+              </li>
+              <li class="txt14 m-b-14">
+                <i class="fa fa-calendar fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                Sunday: Closed
+              </li>
+            </ul>
           </div>
 
           <div class="col-sm-6 col-md-4 p-t-50">
@@ -577,7 +823,7 @@
                 href="images/001_modal.jpg"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/001.jpg" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="320" height="320" src="images/001.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -585,7 +831,7 @@
                 href="images/modal_02.jpg"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/002.jpg" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="320" height="320" src="images/002.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -593,7 +839,7 @@
                 href="images/modal_03.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galey_03.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/modal_03.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -601,7 +847,7 @@
                 href="images/stairs.jpg"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_04.jpg" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="320" height="320" src="images/galery_04.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -609,7 +855,7 @@
                 href="images/modal_05.jpg"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_05.jpg" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="320" height="320" src="images/galery_05.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -617,7 +863,7 @@
                 href="images/modal_06.jpg"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_06.jpg" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galery_06.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -625,7 +871,7 @@
                 href="images/modal_07.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_07.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galery_07.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -633,7 +879,7 @@
                 href="images/modal_08.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_08.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galery_08.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -641,7 +887,7 @@
                 href="images/modal_09.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galey_09.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galey_09.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -649,7 +895,7 @@
                 href="images/modal_10.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_10.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galery_10.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -657,7 +903,7 @@
                 href="images/modal_11.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_11.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galery_11.webp" alt="Completed painting and home improvement project" />
               </a>
 
               <a
@@ -665,7 +911,7 @@
                 href="images/modal_12.png"
                 data-lightbox="gallery-footer"
               >
-                <img src="images/galery_12.png" alt="GALLERY" />
+                <img loading="lazy" decoding="async" width="1024" height="1024" src="images/galery_12.webp" alt="Completed painting and home improvement project" />
               </a>
             </div>
           </div>
@@ -677,18 +923,22 @@
           <div class="flex-sb-m flex-w p-t-22 p-b-22">
             <div class="p-t-5 p-b-5">
               <a
-                href="https://www.angi.com/companylist/us/fl/riverview/vasquez-and-vasquez-painting-reviews-9389683.htm"
+                href="https://www.instagram.com/vasquezandvasquez.painting/"
+                target="_blank"
                 class="fs-15 c-white"
                 ><i class="fa fa-instagram" aria-hidden="true"></i
               ></a>
               <a
                 href="https://www.facebook.com/vasquezvasquez.painting"
-                _target="_blank"
+                target="_blank"
                 class="fs-15 c-white"
                 ><i class="fa fa-facebook m-l-18" aria-hidden="true"></i
               ></a>
-              <a href="#" class="fs-15 c-white"
-                ><i class="fa fa-twitter m-l-18" aria-hidden="true"></i
+              <a
+                href="https://www.angi.com/companylist/us/fl/riverview/vasquez-and-vasquez-painting-reviews-9389683.htm"
+                target="_blank"
+                class="fs-15 c-white"
+                ><i class="fa fa-angi m-l-18" aria-hidden="true"></i
               ></a>
             </div>
 
@@ -701,6 +951,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- WhatsApp Button -->
+    <a class="btn-whatsapp" href="https://wa.me/18138477863?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20painting%20services." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <!-- Back to top -->
     <div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -764,5 +1019,36 @@
     ></script>
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
+    <script>
+      // Hacer que toda la tarjeta de galería sea clickeable
+      $(document).ready(function () {
+        $(".item-gallery").on("click", function (e) {
+          // Evitar el doble click si se hace click directamente en el enlace
+          if (
+            $(e.target).hasClass("btn-show-gallery") ||
+            $(e.target).closest(".btn-show-gallery").length
+          ) {
+            return;
+          }
+          // Encontrar el enlace dentro de esta tarjeta y hacer click en él
+          $(this).find(".btn-show-gallery").trigger("click");
+        });
+
+        // Agregar cursor pointer para indicar que es clickeable
+        $(".item-gallery").css("cursor", "pointer");
+
+        // Reposicionar el botón de cerrar al contenedor de la imagen
+        $(document).on("click", "[data-lightbox]", function () {
+          setTimeout(function () {
+            var closeBtn = $(".lb-close");
+            var outerContainer = $(".lb-outerContainer");
+
+            if (closeBtn.length && outerContainer.length) {
+              closeBtn.appendTo(outerContainer);
+            }
+          }, 100);
+        });
+      });
+    </script>
   </body>
 </html>
