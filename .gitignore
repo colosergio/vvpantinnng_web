@@ -1,5 +1,6 @@
 # Dependencias
 node_modules/
+composer.phar
 # Archivos del sistema
 .DS_Store
 # Logs
@@ -9,7 +10,6 @@ includes/smtp-config.php
 # Compilados
 dist/
 build/
-EOF
 fonts/
 vendor/
 images/

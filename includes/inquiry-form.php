@@ -19,11 +19,20 @@ function loadSmtpConfig() {
         'mail_from' => 'website@vasquezandservices.com',
     ];
 
-    $localConfigPath = __DIR__ . '/smtp-config.php';
-    if (file_exists($localConfigPath)) {
-        $localConfig = require $localConfigPath;
-        if (is_array($localConfig)) {
-            $config = array_merge($config, $localConfig);
+    // Keep production credentials outside public_html so Git deployments
+    // cannot overwrite them. The in-project path remains as a migration and
+    // local-development fallback.
+    $configPaths = [
+        __DIR__ . '/smtp-config.php',
+        dirname(__DIR__, 2) . '/smtp-config.php',
+    ];
+
+    foreach ($configPaths as $configPath) {
+        if (file_exists($configPath)) {
+            $localConfig = require $configPath;
+            if (is_array($localConfig)) {
+                $config = array_merge($config, $localConfig);
+            }
         }
     }
 
